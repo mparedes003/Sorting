@@ -20,14 +20,22 @@ def selection_sort(arr):
 
     return arr
 
-    # TO-DO: swap
-
-    return arr
-
-
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort(arr):
 
+
+def bubble_sort(arr):
+    # Length of the array stops at the 2nd to the last element
+    # because we will be comparing the current value to the next value each time
+    len_of_arr = len(arr)-1
+    # Loop through your array
+    for i in range(len_of_arr):
+        # Compare each element to its neighbor
+        # by comparing the current j with the next value
+        for j in range(len_of_arr - i):
+            # if left element > right element
+            if arr[j] > arr[j+1]:
+                # swap them
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
 
